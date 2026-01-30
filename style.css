@@ -307,7 +307,7 @@ body {
 }
 
 .cta__button--primary {
-    border-color: #4f8f6a;
+    background-color: #4f8f6a;
     color: #fff;
 }
 
@@ -451,4 +451,5 @@ body {
         background: #333;
         margin: 5px 0;
     }
+
 }
