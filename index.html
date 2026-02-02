@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介護施設</title>
+    <meta name="description" content="安心できる介護施設を紹介">
+    <!--リセットcss-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <!-------------------
+    ----------------------header-->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <p class="header__sub">特別養護老人ホーム</p>
+                <h1 class="header__title">
+                    <a href="#top">
+                        山翠の里
+                    </a>
+                </h1>
+            </div>
+
+            <nav class="header__nav" aria-label="グローバルナビ">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#worries">お悩み</a></li>
+                    <li class="header__item"><a href="#worries">特徴</a></li>
+                    <li class="header__item"><a href="#worries">見学・問い合わせ</a></li>
+                </ul>
+            </nav>
+            <!--スマホ用(jsで開閉)-->
+            <button class="header__toggle" aria-label="メニューを開く" aria-expanded="false">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-------------------
+    ----------------------FV-->
+    <section class="fv">
+        <div class="fv__inner">
+            <h1 class="fv__title">
+                ここに来てよかった。<br>
+                そう笑い合える明日を。
+            </h1>
+            <p class="fv__text">
+                ご本人とご家族の想いに、24時間の安心で寄り添います。
+            </p>
+        </div>
+    </section>
+
+    <!-------------------
+    ----------------------section01 リスト-->
+    <section class="worries">
+        <h2 class="worries__title">
+            こんなお悩みありませんか？
+        </h2>
+
+        <ul class="worries__list">
+            <li class="worries__item">安心して過ごせる介護施設を探している</li>
+            <li class="worries__item">24時間体制のサポートがあるか不安</li>
+            <li class="worries__item">雰囲気が合うか分からない</li>
+            <li class="worries__item">まずは見学してから決めたい</li>
+        </ul>
+
+    </section>
+
+    <!-------------------
+    ----------------------section02 カード-->
+    <section class="features">
+        <h2 class="features__title">
+            私たちの介護施設について
+        </h2>
+        <p class="features__lead">
+            ご本人とご家族の安心を第一に考えた、私たちの取り組みをご紹介します。
+        </p>
+
+        <ul class="features__cards">
+            <li class="features__card">
+                <img class="features__icon" src="img/icon.jpeg" alt="">
+                <h3 class="features__heading">
+                    24時間スタッフ常駐
+                </h3>
+                <p class="features__text">
+                    夜間もスタッフが常駐し、急な体調変化にも迅速に対応できる体制を整えています。
+                </p>
+            </li>
+
+            <li class="features__card">
+                <img class="features__icon" src="img/icon.jpeg" alt="">
+                <h3 class="features__heading">
+                    医療機関との連携
+                </h3>
+                <p class="features__text">
+                    近隣の協力医療機関と密に連携。
+                    日々の健康管理から万が一の時まで、心強いサポートをお約束します。
+                </p>
+            </li>
+
+            <li class="features__card">
+                <img class="features__icon" src="img/icon.jpeg" alt="">
+                <h3 class="features__heading">
+                    家族とのつながりを大切に
+                </h3>
+                <p class="features__text">
+                    日々の出来事の共有やイベントへのご招待など、
+                    離れていても安心と笑顔が届く環境づくりに努めています。
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-------------------
+    ----------------------contact　お問い合わせ-->
+    <section class="cta">
+        <div class="cta__inner">
+            <h2 class="cta__title">
+                まずは施設の雰囲気を見に来ませんか？
+            </h2>
+            <p class="cta__text">
+                見学は随時受付中です。ご本人様・ご家族様、どなたでもお気軽にご相談ください。
+            </p>
+
+            <div class="cta__buttons">
+                <a href="#" class="cta__button cta__button--primary">
+                    見学を予約する
+                </a>
+                <a href="#" class="cta__button cta__button--secondary">
+                    採用情報を見る
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-------------------
+    ----------------------footer-->
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__name">特別養護老人ホーム 山翠の里</p>
+
+            <nav class="footer__nav" aria-label="フッターナビ">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#worries">お悩み</a></li>
+                    <li class="footer__item"><a href="#features">特徴</a></li>
+                    <li class="footer__item"><a href="#cta">見学・問い合わせ</a></li>
+                </ul>
+            </nav>
+
+            <p class="footer__copy">
+                <small>© 2026 Sansui-no-Sato</small>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.header__toggle');
+        const nav = document.querySelector('.header__nav');
+
+        toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        toggle.classList.toggle('is-open');
+    </script>
+
+</body>
+
+
+</html>

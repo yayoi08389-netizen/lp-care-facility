@@ -1,0 +1,454 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ---------------------------
+   header
+--------------------------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+}
+
+.header a {
+    padding: 16px;
+}
+
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__inner p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ---ロゴ--- */
+
+.header__sub {
+    font-size: 0.8rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+}
+
+.header__title a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* ---ナビ--- */
+.header__list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.header__item a {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+}
+
+.header__item a:hover {
+    opacity: 0.7;
+}
+
+/* ---ハンバーガー（PCでは非表示）--- */
+.header__toggle {
+    display: none;
+    width: 32px;
+    height: 24px;
+    position: relative;
+}
+
+.header__toggle span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.header__toggle span:nth-child(1) {
+    top: 0;
+}
+
+.header__toggle span:nth-child(2) {
+    top: 11px;
+}
+
+.header__toggle span:nth-child(3) {
+    bottom: 0;
+}
+
+/* 開いた時（×） */
+.header__toggle.is-open span:nth-child(1) {
+    top: 11px;
+    transform: rotate(45deg);
+}
+
+.header__toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__toggle.is-open span:nth-child(3) {
+    bottom: auto;
+    top: 11px;
+    transform: rotate(-45deg);
+}
+
+/* ---------------------------
+   fv
+--------------------------- */
+.fv {
+    padding: 80px 16px;
+    background-image: url(img/fv.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    position: relative;
+    background-position: right 40%;
+}
+
+
+.fv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fv__inner {
+    position: relative;
+    max-width: 1100px;
+    margin-right: auto;
+    padding: 0 20px;
+    margin-left: auto;
+    text-align: left;
+}
+
+.fv__title {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.fv__text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ---------------------------
+   worries
+--------------------------- */
+.worries {
+    padding: 80px 16px;
+    background-color: #ffffff;
+}
+
+.worries__title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.worries__list {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.worries__item {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* ---------------------------
+   features
+--------------------------- */
+.features {
+    padding: 80px 16px;
+}
+
+.features p {
+    font-size: 1.125rem;
+}
+
+.features__title {
+
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.features__lead {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+}
+
+.features__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.features__card {
+    padding: 32px 24px;
+    border-radius: 8px;
+    background: #ffffff;
+    text-align: center;
+    list-style: none;
+}
+
+.features__icon {
+    margin-bottom: 16px;
+}
+
+.features__icon img {
+    width: 48px;
+    height: auto;
+}
+
+.features__heading {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #5d4037;
+}
+
+.features__text {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ---------------------------
+   cta
+--------------------------- */
+.cta {
+    position: relative;
+    padding: 80px 16px;
+    background-image: url(img/cta.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.cta__inner {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta__title {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.cta__text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.cta__buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta__button {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+}
+
+.cta__button--primary {
+    background-color: #4f8f6a;
+    color: #fff;
+}
+
+.cta__button--secondary {
+    background-color: #555;
+    color: #fff;
+}
+
+/* ---------------------------
+   footer
+--------------------------- */
+.footer {
+    background: #f7f7f7;
+    padding: 60px 0 20px;
+}
+
+.footer__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.footer__name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.footer__item a {
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer__copy {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .header__nav {
+        position: absolute;
+        top: 100%;
+        /* ---ヘッダー高さに合わせる--- */
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+
+    }
+
+    .header__nav.is-open {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+    .header__item a {
+        display: block;
+        padding: 16px 24px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* ---fv--- */
+    .fv__inner {
+        margin: 0 auto;
+        padding: 24px 16px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 12px;
+        text-align-last: left;
+    }
+
+    /* ---cta--- */
+    .cta {
+        position: relative;
+    }
+
+    .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .cta__inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta__title {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    .cta__text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .cta__buttons {
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 24px;
+
+    }
+
+    .cta__buttons a {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+
+
+    /* ハンバーガー表示 */
+    .header__toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .header__bar {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #333;
+        margin: 5px 0;
+    }
+}
