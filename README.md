@@ -23,7 +23,7 @@
 ・JavaScript
 ・Git / GitHub
 
-▶ 公開ページ 
 
+▶ 公開ページ 
 https://su-web-08389.github.io/lp-care-facility/
 
