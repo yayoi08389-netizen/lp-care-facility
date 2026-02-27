@@ -304,16 +304,17 @@ body {
     font-size: 1rem;
     border-radius: 9999px;
     text-decoration: none;
-                transition: opacity 0.3s;
+                
 }
-                    .cta__btn:hover {
-    opacity: 0.8;
-}
+
 .cta__button--primary {
     background-color: #4f8f6a;
     color: #fff;
+    transition: opacity 0.3s;
 }
-
+.cta__button--primary:hover {
+    opacity: 0.8;
+}
 .cta__button--secondary {
     background-color: #555;
     color: #fff;
@@ -456,4 +457,5 @@ body {
     }
 
 }
+
 
